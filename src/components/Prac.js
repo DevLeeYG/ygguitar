@@ -3,8 +3,8 @@ import React, { useState } from "react";
 const Prac = () => {
   const [message, setMessage] = useState("");
   const [password, setPassWord] = useState("");
-  const onChangeMessage = (e) => setMessage(e.target.value);
-  const onChangePassWord = (e) => setPassWord(e.target.value);
+  const onChangeMessage = (e) => setMessage(e.target.value); //온체인지에 변경될 값
+  const onChangePassWord = (e) => setPassWord(e.target.value); //패스워드에 변경될 값
 
   const onClick = (e) => {
     if (message.length > 8 && password.length > 8) {
@@ -35,7 +35,7 @@ const Prac = () => {
               <lable for="fassword"></lable>
               <input
                 type="password"
-                id="fassword"
+                id="Password"
                 placeholder="비밀번호입력 8글자이상"
                 value={password}
                 onChange={onChangePassWord}
